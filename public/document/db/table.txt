@@ -1,0 +1,21 @@
+table : dishes
+champ : id, name, description, prep_time, portions, picture, created_at
+join : de la table user a dishes et la table dishes recoit le user_id, de la table type_of_dishes a dishes et la table dishes recoit type_id
+
+table : user
+champ : id, name, email, password, biography, picture, created_at
+
+table : ratings
+champ : value, created_at
+join : la table ratings recoit le user_id de la table users, la table ratings recoit le dish_id de la table dishes
+
+table : comments
+champ : id, content, created_at
+join : la table comments recoit le user_id de la table users, la table commentsrecoit le dish_id de la table dishes
+
+table : ingredients
+champ : id, name, unit, created_at
+
+table : dishes_has_ingredients
+champs : quantity
+join : étant une connexion NM la table dishes_has_ingredients recoit le dish_id de la table dishes et ingredient_id de la table ingredients

@@ -14,5 +14,5 @@
 
     <!-- Footer -->
     <?php include_once '../app/views/templates/partials/_footer.php'; ?>
-  </body>
+</body>
 </html>

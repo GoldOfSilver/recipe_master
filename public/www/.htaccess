@@ -6,7 +6,10 @@ RewriteEngine on
 # ROUTES
 #--------------------------------------------------
 
-
+#ROUTE LISTE DES RECETTES
+#pattern : recettes/index
+#Target: /?dishes=index
+RewriteRule ^recettes/index$ index.php/?dishes=index [L]
 
 # --------------------------------------------------
 RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]
